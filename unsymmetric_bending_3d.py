@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 """
 Unsymmetric Bending Stress + 3D Deformation Visualizer
 ======================================================
@@ -22,14 +23,6 @@ Suggested GitHub repo structure:
 """
 
 from __future__ import annotations
-
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
-
-from matplotlib.widgets import Slider
-from matplotlib.colors import TwoSlopeNorm
-from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
 
 
 # -----------------------------------------------------------------------------
