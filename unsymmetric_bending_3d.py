@@ -450,4 +450,5 @@ plt.suptitle(
     y=0.97
 )
 
-plt.show()
+plt.savefig("unsymmetric_bending.png", dpi=200, bbox_inches="tight")
+print("Saved figure to unsymmetric_bending.png")
