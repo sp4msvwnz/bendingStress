@@ -1,33 +1,19 @@
-import matplotlib.pyplot as plt
 """
 Unsymmetric Bending Stress + 3D Deformation Visualizer
-======================================================
-
-Visualizes:
-1. Stress distribution on a rectangular beam cross-section
-2. Moment vector components
-3. 3D deformed beam shape under unsymmetric bending
-
-Requirements:
-    pip install numpy matplotlib
-
-Run:
-    python unsymmetric_bending_3d.py
-
-Suggested GitHub repo structure:
-    unsymmetric-bending-visualizer/
-    ├── README.md
-    ├── requirements.txt
-    ├── .gitignore
-    └── unsymmetric_bending_3d.py
 """
 
-from __future__ import annotations
+from __future__ import annotations   # MUST be first (after docstring)
 
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
 
-# -----------------------------------------------------------------------------
-# Material / beam defaults
-# -----------------------------------------------------------------------------
+from matplotlib.widgets import Slider
+from matplotlib.colors import TwoSlopeNorm
+from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
+
+# NOW it's safe to use plt
+plt.style.use("dark_background")
 E = 200e9          # Young's modulus, Pa (steel-like default)
 M = 300.0          # Applied moment, N·m
 b_mm = 60.0        # Width, mm
